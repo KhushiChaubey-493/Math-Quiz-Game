@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #247050;
+    --secondary: #1b5a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.background {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.box {
+    width: 100%;
+    max-width: 650px;
+
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box h2 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.box h3 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+#questionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#answerInput {
+    height: 50px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    transition: .3s;
+}
+
+#answerInput:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.primary-btn {
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+
+    .box {
+        padding: 25px;
+    }
+
+    .box h2 {
+        font-size: 1.5rem;
+    }
+
+    .box h3 {
+        font-size: 1.4rem;
+    }
+
+    #answerInput {
+        font-size: 1rem;
+    }
+
+    .primary-btn {
+        font-size: 1rem;
+    }
+}
